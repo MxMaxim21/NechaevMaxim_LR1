@@ -1,0 +1,34 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Background="{DynamicResource PrimaryBackground}"
+        Height="500"
+        Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="4.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center" Margin="0, 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" x:Name="BtnSwap" Content="🔃" Click="BtnSwap_Click" Style="{StaticResource ButtonThree}"/>
+            <TextBlock Grid.Column="1" x:Name="TbName" Text="Обычный" Style="{StaticResource TextMain}"/>
+            <Button Grid.Column="2" x:Name="BtnHistory" Content="⌛" Click="BtnHistory_Click" Style="{StaticResource ButtonThree}"/>
+        </Grid>
+
+        <Frame Grid.Row="1" x:Name="FrameMain" NavigationUIVisibility="Hidden" Margin="5"/>
+    </Grid>
+</Window>
