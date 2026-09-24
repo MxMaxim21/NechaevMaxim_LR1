@@ -4,8 +4,8 @@
 *.userosscache
 *.sln.docstates
 
-bin/
-obj/
+**/bin/
+**/obj/
 [Bb]in/
 [Oo]bj/
 *.exe
@@ -14,4 +14,5 @@ obj/
 
 *.log
 *.tmp
+*.cache
 packages/
